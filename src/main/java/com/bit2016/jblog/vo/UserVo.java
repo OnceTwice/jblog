@@ -40,7 +40,6 @@ public class UserVo {
 
 	@Override
 	public String toString() {
-		return "UserVo [no=" + no + ", id=" + id + ", name=" + name + ", password=" + password + ", regDate=" + regDate
-				+ "]";
+		return "UserVo [no=" + no + ", id=" + id + ", name=" + name + ", password=" + password + ", regDate=" + regDate + "]";
 	}
 }

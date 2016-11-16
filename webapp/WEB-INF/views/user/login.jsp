@@ -8,6 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>JBlog</title>
 	<Link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/jblog.css">
+	
 	<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jquery/jquery-1.9.0.js"></script>
 </head>
 <body>
@@ -21,9 +22,9 @@
 			<li><a href="">내블로그</a></li>
 		</ul>
 		
-		<form class="login-form">
-      		<label>아이디</label> <input type="text" name="id">
-      		<label>패스워드</label> <input type="text" name="password">
+		<form class="login-form" action="${pageContext.request.contextPath }/main/index">
+      		<label>아이디</label>	<input type="text" name="id">
+      		<label>패스워드</label>	<input type="text" name="password">
       		<input type="submit" value="로그인">
 		</form>
 		
