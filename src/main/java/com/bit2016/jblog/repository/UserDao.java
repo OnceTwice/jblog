@@ -13,6 +13,6 @@ public class UserDao {
 	private SqlSession sqlSession;
 	
 	public void insert(UserVo vo) {
-		sqlSession.insert("user.insert", vo);
+		// sqlSession.insert("user.insert", vo);
 	}
 }
