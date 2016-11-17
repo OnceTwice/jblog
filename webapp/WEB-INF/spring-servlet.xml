@@ -81,4 +81,14 @@
 	</mvc:interceptors>
  	<!-- Interceptors(ppt7) 끝 -->
 
+	<!-- 6. MessageSource(ppt9) -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="defaultEncoding" value="UTF-8"/>	<!-- 추가 -->
+		<property name="basenames">
+			<list>
+				<value>messages/messages_ko</value>
+			</list>
+		</property>
+	</bean>
+
 </beans>

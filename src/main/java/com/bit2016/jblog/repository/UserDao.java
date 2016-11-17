@@ -15,9 +15,9 @@ public class UserDao {
 	private SqlSession sqlSession;
 	
 	public void insert(UserVo vo) {
-		System.out.println("인설트전" + vo);
+		// System.out.println("인설트전" + vo);
 		sqlSession.insert("user.insert", vo);
-		System.out.println("인설트후" + vo);
+		// System.out.println("인설트후" + vo);
 	}
 	
 	// 인증(로그인)
@@ -32,5 +32,10 @@ public class UserDao {
 	// 사용자 가져오기
 	public UserVo get(Long no) {
 		return sqlSession.selectOne("user.getByNo", no);
+	}
+	
+	// 아이디 체크
+	public UserVo get(String id) {
+		return sqlSession.selectOne("user.getById", id);
 	}
 }

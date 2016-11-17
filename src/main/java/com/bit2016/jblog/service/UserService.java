@@ -26,4 +26,8 @@ public class UserService {
 	public UserVo getUser(Long no) {
 		return userDao.get(no);
 	}
+	
+	public boolean idExists(String id) {
+		return (userDao.get(id) != null);
+	}
 }

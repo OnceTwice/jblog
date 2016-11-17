@@ -1,7 +1,10 @@
 package com.bit2016.jblog.controller;
 
+import javax.validation.*;
+
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
+import org.springframework.validation.*;
 import org.springframework.web.bind.annotation.*;
 
 import com.bit2016.jblog.service.*;
@@ -15,19 +18,27 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping("/joinform")
-	public String joinForm() {
+	public String joinForm(@ModelAttribute UserVo userVo) {
 		return "user/join";
 	}
 	
 	@RequestMapping("/join")
-	public String joinForm(@ModelAttribute UserVo vo) {
+	public String join(@ModelAttribute @Valid UserVo vo, BindingResult result) {
+		if(result.hasErrors()) {
+//			List<ObjectError> list = result.getAllErrors();
+//			for(ObjectError e : list) {
+//				System.out.println("Object Error : " + e);
+//			}
+			return "user/join";
+		}
+		System.out.println("가입전");
 		userService.join(vo);
+		System.out.println("가입후");
 		return "redirect:/user/joinsuccess";
 	}
 	
 	@RequestMapping("/loginform")
 	public String loginForm() {
-		System.out.println("안녕안녕");
 		return "user/login";
 	}
 
