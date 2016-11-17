@@ -13,11 +13,11 @@
 		]]>
 	</insert>
 	
-	<select id="getByIdAndPassword" parameterType="string" resultType="uservo">
+	<select id="getByIdAndPassword" parameterType="map" resultType="uservo">
 		<![CDATA[
-			select no, name
+			select no, id, name, password
 			from users
-			where id=#{id} 
+			where id=#{id} and password=#{password}
 		]]>
 	</select>
 	
