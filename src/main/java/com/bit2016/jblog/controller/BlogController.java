@@ -13,7 +13,7 @@ public class BlogController {
 	@Autowired
 	private BlogService blogService;
 	
-	@RequestMapping("blog-main")
+	@RequestMapping("")
 	public String blogMain() {
 		return "/blog/blog-main";
 	}

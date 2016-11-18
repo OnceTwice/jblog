@@ -12,8 +12,16 @@ public class UserService {
 	@Autowired
 	private UserDao userDao;
 	
-	public void join(UserVo vo) {
-		userDao.insert(vo);
+	@Autowired
+	private BlogDao blogDao;
+	
+	//@Autowired
+	//private CategoryDao categoryDao;
+	
+	public void join(UserVo vo) {		// 회원가입을 할 때
+		userDao.insert(vo);				// 회원 가입과 동시에
+		// blogDao.insert(vo.getNo());		// 블로그 생성과
+		// categoryDao.insert(vo.getNo());	// 카테고리 생성
 	}
 	
 	public UserVo login(String id, String password) {

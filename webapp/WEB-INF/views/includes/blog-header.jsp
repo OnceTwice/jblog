@@ -2,17 +2,16 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<div>
-	<h1 class="logo">JBlog</h1>
+<div id="header">
+	<h1>Spring 이야기</h1>
 	<ul class="menu">
 		<c:choose>
 			<c:when test="${empty authUser }">
-				<li><a href="${pageContext.request.contextPath }/user/loginform">로그인</a></li>
-				<li><a href="${pageContext.request.contextPath }/user/joinform">회원가입</a></li>
+				<li><a href="${pageContext.request.contextPath }/blog">로그인</a></li>
 			</c:when>
 			<c:otherwise>
-				<li><a href="${pageContext.request.contextPath }/user/logout">로그아웃</a></li>
-				<li><a href="${pageContext.request.contextPath }/blog">내블로그</a></li>
+				<li><a href="${pageContext.request.contextPath }/blog">로그아웃</a></li>
+				<li><a href="${pageContext.request.contextPath }/blog">블로그 관리</a></li>
 			</c:otherwise>
 		</c:choose>
 	</ul>

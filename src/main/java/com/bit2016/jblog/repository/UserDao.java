@@ -15,9 +15,7 @@ public class UserDao {
 	private SqlSession sqlSession;
 	
 	public void insert(UserVo vo) {
-		// System.out.println("인설트전" + vo);
 		sqlSession.insert("user.insert", vo);
-		// System.out.println("인설트후" + vo);
 	}
 	
 	// 인증(로그인)

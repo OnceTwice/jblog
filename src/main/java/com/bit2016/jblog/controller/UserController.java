@@ -25,15 +25,9 @@ public class UserController {
 	@RequestMapping("/join")
 	public String join(@ModelAttribute @Valid UserVo vo, BindingResult result) {
 		if(result.hasErrors()) {
-//			List<ObjectError> list = result.getAllErrors();
-//			for(ObjectError e : list) {
-//				System.out.println("Object Error : " + e);
-//			}
 			return "user/join";
 		}
-		System.out.println("가입전");
 		userService.join(vo);
-		System.out.println("가입후");
 		return "redirect:/user/joinsuccess";
 	}
 	
