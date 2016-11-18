@@ -68,6 +68,7 @@
 	
 		<mvc:interceptor>
 			<mvc:mapping path="/user/logout" />
+			<mvc:mapping path="/blog/logout" />
 			<bean class="com.bit2016.security.AuthLogoutInterceptor" />
 		</mvc:interceptor>
 	
@@ -75,6 +76,7 @@
 			<mvc:mapping path="/**" />
 			<mvc:exclude-mapping path="/user/login" />
 			<mvc:exclude-mapping path="/user/logout" />
+			<mvc:exclude-mapping path="/blog/logout" />
 			<mvc:exclude-mapping path="/assets/**" />
 			<bean class="com.bit2016.security.AuthInterceptor" />
 		</mvc:interceptor>

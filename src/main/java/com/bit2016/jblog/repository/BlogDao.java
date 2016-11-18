@@ -4,8 +4,6 @@ import org.apache.ibatis.session.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
-import com.bit2016.jblog.vo.*;
-
 @Repository
 public class BlogDao {
 
@@ -13,6 +11,6 @@ public class BlogDao {
 	private SqlSession sqlSession;
 	
 	public void insert(Long vo) {
-		// sqlSession.insert("blog.insert", vo);
+		sqlSession.insert("blog.insert", vo);
 	}
 }

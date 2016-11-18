@@ -1,3 +1,27 @@
+select *
+from users;
+
+select *
+from blog;
+
+select *
+from category;
+
+
+delete from users;
+
+delete from blog;
+
+delete from category;
+
+commit;
+
+
+
+
+
+
+
 -- select
 select *
 from users;

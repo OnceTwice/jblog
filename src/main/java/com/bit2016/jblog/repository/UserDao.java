@@ -14,8 +14,9 @@ public class UserDao {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	public void insert(UserVo vo) {
+	public Long insert(UserVo vo) {
 		sqlSession.insert("user.insert", vo);
+		return vo.getNo();
 	}
 	
 	// 인증(로그인)

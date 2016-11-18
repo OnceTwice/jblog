@@ -4,8 +4,11 @@
 <mapper namespace="category">
 	<insert id="insert" parameterType="long">
 		<![CDATA[
-			
+			insert
+			into category
+			values( category_seq.nextval, #{no }, '기본 카테고리 이름', '기본 카테고리 설명', sysdate)
 		]]>
 	</insert>
 </mapper>
 
+	

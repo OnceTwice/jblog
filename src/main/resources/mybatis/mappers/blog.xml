@@ -4,7 +4,9 @@
 <mapper namespace="blog">
 	<insert id="insert" parameterType="long">
 		<![CDATA[
-			
+			insert
+			into blog
+			values( #{no }, '기본 title', '기본 logo')
 		]]>
 	</insert>
 </mapper>

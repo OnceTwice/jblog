@@ -11,15 +11,13 @@
 </head>
 <body>
 	<div id="container">
-		<c:import url="/WEB-INF/views/includes/blog-header.jsp"/>
+		<c:import url="/WEB-INF/views/includes/blog-header.jsp">
+			<c:param name="menu" value="write"/>
+		</c:import>
 		
 		<div id="wrapper">
 			<div id="content" class="full-screen">
-				<ul class="admin-menu">
-					<li><a href="">기본설정</a></li>
-					<li><a href="">카테고리</a></li>
-					<li class="selected">글작성</li>
-				</ul>
+				<c:import url="/WEB-INF/views/includes/blog-admin-header.jsp"/>
 				
 				<form action="" method="post">
 			      	<table class="admin-cat-write">
